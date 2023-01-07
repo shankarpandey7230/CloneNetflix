@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
@@ -123,7 +126,7 @@ div.splash input ~ span {
   transition: all 0.15s ease;
   pointer-events: none;
 }
-div.splash input:focuz {
+div.splash input:focus {
   padding-top: 19px;
   padding-bottom: 11px;
 }
@@ -137,4 +140,70 @@ div.splash button {
   background-color: #e50914;
   color: #fff;
   border: 0;
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  padding: 70px 35px;
+  align-items: center;
+  border-top: 8px solid #222;
+}
+section.last {
+  border-bottom: 8px solid #222;
+}
+section div.texts h1 {
+  font-size: 3.125rem;
+  margin-bottom: 8px;
+}
+section div.texts p {
+  font-size: 1.625rem;
+}
+.media {
+  position: relative;
+}
+.media.s1 img {
+  width: 400px;
+}
+.media.s1 video {
+  width: 293px;
+  position: absolute;
+  top: 62px;
+  left: 52px;
+}
+section:nth-child(even) div.texts {
+  order: 2;
+}
+section div.download {
+  border: 2px solid #666;
+  border-radius: 15px;
+  padding: 10px;
+  height: 95px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  width: 280px;
+  background-color: black;
+  left: 50%;
+  margin-left: -145px;
+  gap: 15px;
+
+  grid-template-columns: max-content 1fr max-content;
+}
+section div.download img {
+  height: 75px;
+  width: auto;
+}
+.media.s3 img {
+  width: 400px;
+  position: relative;
+  z-index: 5;
+}
+.media.s3 video {
+  width: 250px;
+  position: absolute;
+  top: 36px;
+  left: 72px;
 }
